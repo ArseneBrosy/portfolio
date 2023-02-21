@@ -191,11 +191,8 @@ header {
 ******************************************/
 
 .description-section {
-    padding: 15% 10% 0;
+    padding: 15% 10% 5%;
     background-color: #FEFAE0;
-}
-
-.description-section>div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -225,7 +222,7 @@ header {
 }
 
 .parcours-section svg {
-    padding: 5% 10% 5%;
+    padding: 15% 10% 5%;
 }
 
 
@@ -233,17 +230,10 @@ header {
  SVG
 ******************************************/
 
-svg {
-    margin: 0 0 50px;
-    padding: 0;
-}
-
 path {
     stroke-width: 10px;
     stroke-dasharray: 600;
     stroke-dashoffset: 600;
-}
-path.animate {
     animation: dash 1s linear forwards;
 }
 

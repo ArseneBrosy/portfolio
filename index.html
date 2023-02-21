@@ -18,34 +18,131 @@
 </head>
 <body>
     <!-- En tete du site -->
-    <header>
+    <header id="header-r">
+        <button onclick="" class="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
     </header>
 
     <!-- Contenu principal du site -->
     <main>
-        <section class="top-section">
+        <section class="top-section" id="top">
             <!-- Juste pour centrer le titre -->
             <div style="height: 75px;"></div>
             <div class="title">
-                <p>Arsene Brosy • Web design • 2023</p>
-                <p>Web design • 2023 • Arsene Brosy</p>
-                <p>2023 • Arsene Brosy • Web design</p>
+                <p>Arsene Brosy • Etudiant • 2023</p>
+                <p>Etudiant • 2023 • Arsene Brosy</p>
+                <p>2023 • Arsene Brosy • Etudiant</p>
             </div>
             <div class="arrow">
                 <img src="./src/icons/arrow_scroll.svg" alt="">
             </div>
         </section>
-        <section class="description-section">
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam assumenda architecto
-                ratione odio earum blanditiis! Facilis cumque necessitatibus cupiditate natus iste
-                quae animi! Aperiam asperiores unde iste at vitae velit?
-            </p>
+
+        <section class="header-section" id="header-s">
+            <nav>
+                <ul>
+                    <li><a href="#top">Haut de la page</a></li>
+                    <li><a href="#about">Arsene Brosy</a></li>
+                    <li><a href="#parcours">Parcours</a></li>
+                    <li><a href="">Competences</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <script>
+            document.getElementById("header-r").style.height = document.getElementById("header-s").clientHeight + "px";
+        </script>
+
+        <section class="description-section" id="about">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" viewBox="0 100 1476.6 210"></g>
+                <g><path d="m185.1 300.5-88-174-88 174m19-38h138" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M330.8 300V126.5h72c31 0 56 25 56 56s-25 55.5-56 55.5h-72" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="m636.4 300-56-72m-79 0h84c28 0 51-22.5 51-50.5s-23-51-51-51h-84V300" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M774.4 113.5c52 0 93 42 93 94 0 51-41 93-93 93-51 0-93-42-93-93 0-52 42-94 93-94" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M911 300V126.5h72c31 0 56 25 56 56s-25 55.5-56 55.5h-72" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1174.6 113.5c52 0 93 42 93 94 0 51-41 93-93 93-51 0-93-42-93-93 0-52 42-94 93-94" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1312.6 277c15 8 34 22 65 23h2c42 1 60-22 60-45 0-28-27-40.5-66-48.5-23-5-55-16-54-45 0-32 20-48 62-45 16 1 33 8 48 16" vector-effect="non-scaling-stroke"/></g>
+            </svg>
+
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid necessitatibus odio rerum et
+                    sequi culpa dignissimos. Accusantium magnam officia cumque fugit quod illo assumenda asperiores
+                    maiores, molestias rerum rem voluptatibus!
+                </p>
+                <div class="photo square-width" id="photo-scroll"></div>
+            </div>
+            <script>
+                document.addEventListener("scroll", () => {
+                    var scrollFloat = (window.scrollY - screen.height) * 0.5;
+                    var scroll = scrollFloat + "%";
+                    document.getElementById("photo-scroll").style.backgroundPositionY =  scroll;
+                });
+            </script>
+        </section>
+
+        <section class="parcours-section" id="parcours">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" viewBox="0 100 1545.4 210">
+                <g><path d="M6.6 300V126.5h72c31 0 56 25 56 56s-25 55.5-56 55.5h-72" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="m356.3 300.5-88-174-88 174m19-38h138" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="m536.4 300-56-72m-79 0h84c28 0 51-22.5 51-50.5s-23-51-51-51h-84V300" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M733.4 275.5c-16 15-38 25-62 25-50 0-90-41-90-91s40-90 90-90c25 0 47 10 63 25" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M874.4 113.5c52 0 93 42 93 94 0 51-41 93-93 93-51 0-93-42-93-93 0-52 42-94 93-94" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1010.4 123.5V235c0 36 35 65 73 65s73-29 73-65V123.5" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="m1334.4 300-56-72m-79 0h84c28 0 51-22.5 51-50.5s-23-51-51-51h-84V300" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1381.4 277c15 8 34 22 65 23h2c42 1 60-22 60-45 0-28-27-40.5-66-48.5-23-5-55-16-54-45 0-32 20-48 62-45 16 1 33 8 48 16" vector-effect="non-scaling-stroke"/></g>
+            </svg>
         </section>
     </main>
 
     <!-- Pied de page du site -->
     <footer>
     </footer>
+
+    <script>
+        var elems = document.getElementsByClassName("square-width");
+        for (var i = 0; i < elems.length; i++) {
+            elems[i].style.height = elems[i].clientWidth + "px";
+        }
+    </script>
+
+    <!-- Animation des svg -->
+    <script>
+        const colors = ['#FFFFFF', '#FAEDCD', '#373F51'];
+
+        function tween (node, index) {
+        // Store the node in another variable
+        let path = node;
+        // Loop through the colors
+        colors.forEach((color, index) => {
+            if (index !== 0) {
+            path = path.cloneNode();
+            node.parentNode.appendChild(path);
+            }
+            path.setAttribute('stroke', color);
+        });
+        }
+
+        document.querySelectorAll('svg path').forEach(p => tween(p));
+
+        document.addEventListener("scroll", () => {
+            document.querySelectorAll('svg path').forEach(p => {
+                var rect = p.getBoundingClientRect();
+                if (
+                    rect.top >= -200 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 200 &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                ) {
+                    p.classList.add("animate");
+                } else {
+                    p.classList.remove("animate");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
