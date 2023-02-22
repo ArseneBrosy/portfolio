@@ -233,36 +233,19 @@ header {
 }
 
 /*****************************************
- PARCOURS SECTION
+ TABLE SECTION
 ******************************************/
 
-.parcours-section {
+.table-section {
     background-color: #FEFAE0;
     padding: 5% 10%;
 }
 
-.parcours-section h1 {
+.table-section h1 {
     margin-top: 100px;
 }
 
-.parcours-section h1:first-of-type {
-    margin-top: 0;
-}
-
-/*****************************************
- SKILLS SECTION
-******************************************/
-
-.skills-section {
-    background-color: #FEFAE0;
-    padding: 5% 10%;
-}
-
-.skills-section h1 {
-    margin-top: 100px;
-}
-
-.skills-section h1:first-of-type {
+.table-section h1:first-of-type {
     margin-top: 0;
 }
 
@@ -276,34 +259,26 @@ header {
     padding: 5% 10%;
 }
 
-.contact-section .methods {
-    display: flex;
-    justify-content: space-between;
-}
-
-.contact-section .methods div {
-    width: 48%;
-}
-
-.contact-section .methods div form {
+.contact-section .form {
+    width: 50%;
     display: flex;
     flex-direction: column;
 }
 
-.contact-section .methods div form * {
+.contact-section .form * {
     margin: 10px 0;
     padding: 10px 5px;
     border: 3px solid #373F51;
     border-radius: 3px;
 }
 
-.contact-section .methods div form textarea {
+.contact-section .form textarea {
     height: 150px;
     min-height: 150px;
     resize: vertical;
 }
 
-.contact-section .methods div form button {
+.contact-section .form button {
     width: fit-content;
     padding: 10px 15px;
     background-color: #373F51;
@@ -395,7 +370,7 @@ table tr:not(:first-child):hover {
     top: -150vw;
     left: -150vw;
     width: 300vw;
-    z-index: 1;
+    z-index: -1;
 }
 
 #menu-transition div {
@@ -427,4 +402,29 @@ table tr:not(:first-child):hover {
 #menu ul {
     list-style-type: none;
     padding: 0;
+}
+
+#menu ul li {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 300ms ease-in;
+}
+
+#menu ul li a {
+    color: #373F51;
+}
+
+#menu ul li a p {
+    display: inline;
+    opacity: 0;
+    transition: 300ms;
+}
+
+#menu ul li:hover {
+    transform: translateX(50px);
+}
+
+#menu ul li:hover a p {
+    opacity: 1;
 }
