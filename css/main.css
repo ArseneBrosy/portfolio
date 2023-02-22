@@ -58,6 +58,11 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: 200ms;
+}
+
+.burger-menu:not(.active):hover {
+    padding: 5px 0;
 }
 
 .burger-menu div {
@@ -66,10 +71,23 @@ header {
     height: 10%;
 }
 
+.burger-menu.active div {
+    transform: translateY(-17.5px) rotateZ(-45deg);
+}
+
+.burger-menu.active div:first-child {
+    transform: translateY(17.5px) rotateZ(45deg);
+}
+
+.burger-menu.active div:last-child {
+    display: none;
+}
+
 
 /*****************************************
  SECTION TOP
 ******************************************/
+
 .top-section {
     height: 100vh;
     display: flex;
@@ -152,7 +170,7 @@ header {
 
 .header-section {
     background-color: #FAEDCD;
-
+    border-bottom: 3px solid #373F51;
     position: sticky;
     top: 0;
 }
@@ -189,7 +207,7 @@ header {
 ******************************************/
 
 .description-section {
-    padding: 15% 10% 0;
+    padding: 0 10%;
     background-color: #FEFAE0;
 }
 
@@ -220,7 +238,15 @@ header {
 
 .parcours-section {
     background-color: #FEFAE0;
-    padding: 5% 10% 5%;
+    padding: 5% 10%;
+}
+
+.parcours-section h1 {
+    margin-top: 100px;
+}
+
+.parcours-section h1:first-of-type {
+    margin-top: 0;
 }
 
 /*****************************************
@@ -229,32 +255,71 @@ header {
 
 .skills-section {
     background-color: #FEFAE0;
-    padding: 5% 10% 5%;
+    padding: 5% 10%;
 }
+
+
+/*****************************************
+ CONTACT SECTION
+******************************************/
+
+.contact-section {
+    background-color: #FEFAE0;
+    padding: 5% 10%;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contact-section form * {
+    margin: 10px 0;
+    padding: 10px 5px;
+    border: 3px solid #373F51;
+    border-radius: 3px;
+}
+
+.contact-section form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-section form button {
+    width: fit-content;
+    padding: 10px 15px;
+    background-color: #373F51;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 
 /*****************************************
  SVG
 ******************************************/
 
-svg {
-    margin: 0 0 50px;
+.svg-title {
+    margin: 100px 0 50px;
     padding: 0;
 }
 
-path {
+.svg-title path {
     stroke-width: 10px;
     stroke-dasharray: 600;
     stroke-dashoffset: 600;
 }
-path.animate {
+.svg-title path.animate {
     animation: dash 1s linear forwards;
 }
 
-path:nth-child(2) {
+.svg-title path:nth-child(2) {
     animation-delay: 200ms;
 }
 
-path:nth-child(3) {
+.svg-title path:nth-child(3) {
     animation-delay: 400ms;
 }
 
@@ -274,16 +339,31 @@ path:nth-child(3) {
 
 table {
     text-align: left;
+    color: #373F51;
+    width: 100%;
+    border-collapse: collapse;
 }
 
-table tr * {
-    padding: 0 30px;
+table tr>* {
+    padding: 10px 0;
+    border-top: 3px solid #373F51;
+    border-bottom: 3px solid #373F51;
+    transition: 200ms;
 }
 
-table tr *:first-child {
-    padding-left: 0;
+table tr:hover td {
+    transform: translateX(20px);
 }
 
-table tr *:last-child {
-    padding-right: 0;
+table a {
+    color: #373F51;
+}
+
+table tr {
+    background-color: transparent;
+    transition: 200ms;
+}
+
+table tr:not(:first-child):hover {
+    background-color: #FAEDCD;
 }
