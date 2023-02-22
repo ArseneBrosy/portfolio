@@ -13,7 +13,7 @@ body {
     font-weight: normal;
     font-size: 1.2rem;
     line-height: 1.4;
-    color: black;
+    color: #373F51;
     background-color: white;
     margin: 0;
     padding: 0;
@@ -27,6 +27,7 @@ img {
 
 a {
     text-decoration: none;
+    color: #373F51;
 }
 
 p {
@@ -187,7 +188,6 @@ header {
 }
 
 .header-section nav ul li a {
-    color: #373F51;
     font-size: 1rem;
     text-transform: uppercase;
     background-image: linear-gradient(#373F51, #373F51);
@@ -221,7 +221,6 @@ header {
     font-size: 2.5rem;
     font-weight: 700;
     width: 50%;
-    color: #373F51;
 }
 
 .description-section .photo {
@@ -230,6 +229,28 @@ header {
     background: url("../src/img/photo.png");
     background-repeat: no-repeat;
     background-size: 120%;
+}
+
+.description-section .photo svg {
+    fill: #373F51;
+    width: 40%;
+    height: 40%;
+    font-weight: bold;
+    animation: rotate 5s linear infinite;
+}
+
+.description-section .photo svg:last-child {
+    margin-left: calc(-40% - 6px);
+    animation-delay: -3.1s;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
 }
 
 /*****************************************
@@ -331,7 +352,6 @@ header {
 
 table {
     text-align: left;
-    color: #373F51;
     width: 100%;
     border-collapse: collapse;
 }
@@ -345,10 +365,6 @@ table tr>* {
 
 table tr:hover td {
     transform: translateX(20px);
-}
-
-table a {
-    color: #373F51;
 }
 
 table tr {
@@ -427,4 +443,14 @@ table tr:not(:first-child):hover {
 
 #menu ul li:hover a p {
     opacity: 1;
+}
+
+
+/*****************************************
+ PARCOURS PAGE
+******************************************/
+
+.parcours {
+    background-color: #236477;
+    overflow: hidden;
 }

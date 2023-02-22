@@ -36,7 +36,7 @@
         <ul>
             <li><a href="index.html"><p>•</p>Arsène Brosy</a></li>
             <li><a href=""><p>•</p>Biographie</a></li>
-            <li><a href=""><p>•</p>Parcours</a></li>
+            <li><a href="parcours.html"><p>•</p>Parcours</a></li>
             <li><a href=""><p>•</p>Créations</a></li>
         </ul>
     </div>
@@ -85,7 +85,34 @@
                     sequi culpa dignissimos. Accusantium magnam officia cumque fugit quod illo assumenda asperiores
                     maiores, molestias rerum rem voluptatibus!
                 </p>
-                <div class="photo square-width" id="photo-scroll"></div>
+                <div class="photo square-width" id="photo-scroll">
+                    <!--<svg viewBox="0 0 100 100" width="100" height="100">
+                        <defs>
+                        <path id="circle"
+                            d="
+                            M 50, 50
+                            m -37, 0
+                            a 37,37 0 1,1 74,0
+                            a 37,37 0 1,1 -74,0"/>
+                        </defs>
+                        <text font-size="1rem">
+                            <textPath xlink:href="#circle">Arsène Brosy</textPath>
+                        </text>
+                    </svg>
+                    <svg viewBox="0 0 100 100" width="100" height="100">
+                        <defs>
+                        <path id="circle"
+                            d="
+                            M 50, 50
+                            m -37, 0
+                            a 37,37 0 1,1 74,0
+                            a 37,37 0 1,1 -74,0"/>
+                        </defs>
+                        <text font-size="1rem">
+                            <textPath xlink:href="#circle">&copy;2023</textPath>
+                        </text>
+                    </svg>-->
+                </div>
             </div>
             <script>
                 document.addEventListener("scroll", () => {
@@ -256,10 +283,11 @@
                 <input id="email-name" type="text" name="name" placeholder="Nom complet" required>
                 <input id="email-email" type="email" name="email" placeholder="Votre e-mail" required>
                 <select name="type" id="email-type" required>
-                    <option value="" disabled selected>Type de message</option>
-                    <option value="">Proposition de projet</option>
-                    <option value="">Question</option>
-                    <option value="">Sugestion</option>
+                    <option value="0" disabled selected>Type de message</option>
+                    <option value="1">Proposition de projet</option>
+                    <option value="2">Question</option>
+                    <option value="3">Sugestion</option>
+                    <option value="4">Autre</option>
                 </select>
                 <textarea id="email-message" name="message" placeholder="Message" required></textarea>
                 <button onclick="SendEmail();" id="email-button" type="submit">Envoyer</button>
