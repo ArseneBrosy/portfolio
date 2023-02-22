@@ -44,20 +44,20 @@
         <section class="header-section" id="header-s">
             <nav>
                 <ul>
-                    <li><a href="#top">Haut de la page</a></li>
-                    <li><a href="#about">Arsene Brosy</a></li>
+                    <li><a href="#top">Arsene Brosy</a></li>
+                    <li><a href="#about">A Propos</a></li>
                     <li><a href="#parcours">Parcours</a></li>
-                    <li><a href="">Competences</a></li>
+                    <li><a href="#skills">Competences</a></li>
                 </ul>
             </nav>
         </section>
-
+        <!-- Mettre le header et la section header a la meme hauteur  -->
         <script>
             document.getElementById("header-r").style.height = document.getElementById("header-s").clientHeight + "px";
         </script>
 
         <section class="description-section" id="about">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" viewBox="0 100 1476.6 210"></g>
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-title" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" viewBox="0 100 1476.6 210"></g>
                 <g><path d="m185.1 300.5-88-174-88 174m19-38h138" vector-effect="non-scaling-stroke"/></g>
                 <g><path d="M330.8 300V126.5h72c31 0 56 25 56 56s-25 55.5-56 55.5h-72" vector-effect="non-scaling-stroke"/></g>
                 <g><path d="m636.4 300-56-72m-79 0h84c28 0 51-22.5 51-50.5s-23-51-51-51h-84V300" vector-effect="non-scaling-stroke"/></g>
@@ -77,7 +77,8 @@
             </div>
             <script>
                 document.addEventListener("scroll", () => {
-                    var scrollFloat = (window.scrollY - screen.height) * 0.5;
+                    var scrollFloat = (window.scrollY - screen.height - 100) * 0.5;
+                    scrollFloat = Math.min(Math.max(scrollFloat, 0), 100);
                     var scroll = scrollFloat + "%";
                     document.getElementById("photo-scroll").style.backgroundPositionY =  scroll;
                 });
@@ -85,7 +86,7 @@
         </section>
 
         <section class="parcours-section" id="parcours">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" viewBox="0 100 1545.4 210">
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-title" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" viewBox="0 100 1545.4 210">
                 <g><path d="M6.6 300V126.5h72c31 0 56 25 56 56s-25 55.5-56 55.5h-72" vector-effect="non-scaling-stroke"/></g>
                 <g><path d="m356.3 300.5-88-174-88 174m19-38h138" vector-effect="non-scaling-stroke"/></g>
                 <g><path d="m536.4 300-56-72m-79 0h84c28 0 51-22.5 51-50.5s-23-51-51-51h-84V300" vector-effect="non-scaling-stroke"/></g>
@@ -94,6 +95,55 @@
                 <g><path d="M1010.4 123.5V235c0 36 35 65 73 65s73-29 73-65V123.5" vector-effect="non-scaling-stroke"/></g>
                 <g><path d="m1334.4 300-56-72m-79 0h84c28 0 51-22.5 51-50.5s-23-51-51-51h-84V300" vector-effect="non-scaling-stroke"/></g>
                 <g><path d="M1381.4 277c15 8 34 22 65 23h2c42 1 60-22 60-45 0-28-27-40.5-66-48.5-23-5-55-16-54-45 0-32 20-48 62-45 16 1 33 8 48 16" vector-effect="non-scaling-stroke"/></g>
+            </svg>
+
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Nom</th>
+                    <th>Lieu</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>2010 - 2013</td>
+                    <td>Ecole enfantine</td>
+                    <td>Courtételle</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2013 - 2019</td>
+                    <td>Ecole primaire</td>
+                    <td>Courtételle</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2019 - 2022</td>
+                    <td>Collège</td>
+                    <td>Delémont</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2022 - ...</td>
+                    <td>CFC Informaticien</td>
+                    <td>Porrentruy</td>
+                    <td></td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="skills-section" id="skills">
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-title" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" viewBox="0 100 2043.2 210">
+                <g><path d="M158 275.5c-16 15-38 25-62 25-50 0-90-41-90-91s40-90 90-90c25 0 47 10 63 25" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M299 113.5c52 0 93 42 93 94 0 51-41 93-93 93-51 0-93-42-93-93 0-52 42-94 93-94" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M435 300.5v-174l85 115 87-115v174" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M650.6 300V126.5h72c31 0 56 25 56 56s-25 55.5-56 55.5h-72" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M937.2 300.5h-116v-174h116m-116 87h99" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1053.2 300V126.5m-73 0h146" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1285.2 300.5h-116v-174h116m-116 87h99" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1328.2 300.5v-174l147 174v-174" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1670.2 275.5c-16 15-38 25-62 25-50 0-90-41-90-91s40-90 90-90c25 0 47 10 63 25" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1834.2 300.5h-116v-174h116m-116 87h99" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1879.2 277c15 8 34 22 65 23h2c42 1 60-22 60-45 0-28-27-40.5-66-48.5-23-5-55-16-54-45 0-32 20-48 62-45 16 1 33 8 48 16" vector-effect="non-scaling-stroke"/></g>
             </svg>
         </section>
     </main>
@@ -110,39 +160,6 @@
     </script>
 
     <!-- Animation des svg -->
-    <script>
-        const colors = ['#FFFFFF', '#FAEDCD', '#373F51'];
-
-        function tween (node, index) {
-        // Store the node in another variable
-        let path = node;
-        // Loop through the colors
-        colors.forEach((color, index) => {
-            if (index !== 0) {
-            path = path.cloneNode();
-            node.parentNode.appendChild(path);
-            }
-            path.setAttribute('stroke', color);
-        });
-        }
-
-        document.querySelectorAll('svg path').forEach(p => tween(p));
-
-        document.addEventListener("scroll", () => {
-            document.querySelectorAll('svg path').forEach(p => {
-                var rect = p.getBoundingClientRect();
-                if (
-                    rect.top >= -200 &&
-                    rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 200 &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                ) {
-                    p.classList.add("animate");
-                } else {
-                    p.classList.remove("animate");
-                }
-            });
-        });
-    </script>
+    <script src="./js/svg-titles.js"></script>
 </body>
 </html>
