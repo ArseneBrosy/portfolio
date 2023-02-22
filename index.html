@@ -232,13 +232,24 @@
                 <g><path d="M1311.2 300V126.5m-73 0h146" vector-effect="non-scaling-stroke"/></g>
             </svg>
 
-            <h1>E-mail</h1>
-            <form method="POST">
-                <input id="email-name" type="text" name="name" placeholder="Nom complet" required>
-                <input id="email-email" type="email" name="email" placeholder="Votre e-mail" required>
-                <textarea id="email-message" name="message" placeholder="Message" required></textarea>
-                <button onclick="SendEmail();" id="email-button" type="submit">Envoyer</button>
-            </form>
+            <div class="methods">
+                <div>
+                    <h1>Me laisser un message</h1>
+                    <form id="email-form" method="POST">
+                        <input id="email-name" type="text" name="name" placeholder="Nom complet" required>
+                        <input id="email-email" type="email" name="email" placeholder="Votre e-mail" required>
+                        <select name="type" id="email-type" required>
+                            <option value="" disabled selected>Type de message</option>
+                            <option value="">Proposition de projet</option>
+                            <option value="">Question</option>
+                            <option value="">Sugestion</option>
+                        </select>
+                        <textarea id="email-message" name="message" placeholder="Message" required></textarea>
+                        <button onclick="SendEmail();" id="email-button" type="submit">Envoyer</button>
+                    </form>
+                    <p id="email-thanks" style="display: none;">Merci. je vous recontacterai bientôt.</p>
+                </div>
+            </div>
         </section>
     </main>
 

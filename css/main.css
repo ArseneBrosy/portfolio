@@ -276,26 +276,34 @@ header {
     padding: 5% 10%;
 }
 
-.contact-section form {
+.contact-section .methods {
     display: flex;
-    flex-direction: column;
-    width: 50%;
+    justify-content: space-between;
 }
 
-.contact-section form * {
+.contact-section .methods div {
+    width: 48%;
+}
+
+.contact-section .methods div form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .methods div form * {
     margin: 10px 0;
     padding: 10px 5px;
     border: 3px solid #373F51;
     border-radius: 3px;
 }
 
-.contact-section form textarea {
+.contact-section .methods div form textarea {
     height: 150px;
     min-height: 150px;
     resize: vertical;
 }
 
-.contact-section form button {
+.contact-section .methods div form button {
     width: fit-content;
     padding: 10px 15px;
     background-color: #373F51;
