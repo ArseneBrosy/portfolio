@@ -155,10 +155,10 @@ header {
 }
 
 @keyframes title {
-    0% {
+    from {
         background-position-x: -100vw;
     }
-    100% {
+    to {
         background-position-x: 100vw;
     }
 }
@@ -283,6 +283,7 @@ header {
 
 .contact-section form textarea {
     height: 150px;
+    min-height: 150px;
     resize: vertical;
 }
 
