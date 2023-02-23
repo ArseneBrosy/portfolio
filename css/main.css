@@ -127,15 +127,15 @@ header {
 }
 
 .top-section div.arrow {
-    height: 75px;
+    height: 4.5vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
 .top-section img {
-    width: 50px;
-    height: 50px;
+    width: 3vw;
+    height: 3vw;
     animation: arrow-scroll 1s infinite;
 }
 
@@ -145,13 +145,13 @@ header {
         margin-bottom: 0;
     }
     50% {
-        margin-bottom: 25px;
+        margin-bottom: 1.5vw;
     }
     75% {
         margin-bottom: 0;
     }
     87% {
-        margin-bottom: 5px;
+        margin-bottom: 0.3vw;
     }
     100% {
         margin-bottom: 0;
@@ -419,7 +419,7 @@ table tr:not(:first-child):hover {
     height: 100vh;
     z-index: 2;
     position: fixed;
-    padding: 100px;
+    padding: 6vw;
 }
 
 #menu ul {
@@ -428,7 +428,7 @@ table tr:not(:first-child):hover {
 }
 
 #menu ul li {
-    font-size: 5rem;
+    font-size: 5vw;
     text-transform: uppercase;
     font-weight: bold;
     transition: 150ms ease-in;
@@ -446,7 +446,7 @@ table tr:not(:first-child):hover {
 }
 
 #menu ul li:hover {
-    transform: translateX(50px);
+    transform: translateX(3vw);
 }
 
 #menu ul li:hover a * {
@@ -456,23 +456,23 @@ table tr:not(:first-child):hover {
 #menu button {
     cursor: pointer;
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 1.5vw;
+    right: 1.5vw;
     --c: #2D728F;
     color: var(--c);
-    font-size: 1.5rem;
-    border: 0.2em solid var(--c);
-    border-radius: 0.5em;
-    padding: 15px 50px;
+    font-size: 1.5vw;
+    border: 0.2vw solid var(--c);
+    border-radius: 0.5vw;
+    padding: 0.9vw 3vw;
     text-transform: uppercase;
     font-weight: bold;
     font-family: sans-serif;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.1vw;
     text-align: center;
     overflow: hidden;
     z-index: 1;
     transition: 0.5s;
-    margin: 1em;
+    margin: 0;
 }
 
 #menu button span {
