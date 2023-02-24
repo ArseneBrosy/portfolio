@@ -207,15 +207,36 @@ header {
 
 .header-section nav ul li a::after {
     content: "";
-    display: block;
     width: 0;
     height: 0.1vw;
-    background-color: #373F51;
-    transition-duration: 300ms;
+    background-color: #373f51;
+    animation: underline-exit 150ms forwards;
 }
 
 .header-section nav ul li a:hover::after {
-    width: 100%;
+    animation: underline-enter 150ms forwards;
+}
+
+@keyframes underline-enter {
+    from {
+        margin-left: 0;
+        width: 0;
+    }
+    to {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@keyframes underline-exit {
+    from {
+        margin-left: 0;
+        width: 100%;
+    }
+    to {
+        margin-left: 100%;
+        width: 0;
+    }
 }
 
 
@@ -284,18 +305,27 @@ header {
     padding: 5% 10%;
 }
 
+.contact-section .form-cont {
+    display: flex;
+    justify-content: space-between;
+}
+
 .contact-section .form {
-    width: 50%;
+    width: 48%;
     display: flex;
     flex-direction: column;
 }
 
-.contact-section .form * {
+.contact-section .form input, .contact-section .form select, .contact-section .form textarea {
     margin: 0.6vw 0;
     padding: 0.6vw 0.3vw;
     border: 0.2vw solid #373F51;
     border-radius: 0.2vw;
     font-size: 1vw;
+}
+
+.contact-section .form h1 {
+    font-size: 2vw;
 }
 
 .contact-section .form textarea {
@@ -313,6 +343,34 @@ header {
     border-radius: 0.3vw;
     cursor: pointer;
     align-self: flex-end;
+}
+
+.contact-section .form #offer-details {
+    margin-bottom: 1vw;
+}
+
+.contact-section .form #offer-details h2 {
+    margin-bottom: 0;
+    font-size: 1.5vw;
+}
+
+.contact-section .form #offer-details p {
+    font-size: 1vw;
+}
+
+.contact-section .form #offer-details .red-star {
+    color: red;
+    font-size: 1vw;
+}
+
+.contact-section .form #offer-details .little-text {
+    font-size: 1vw;
+    font-style: italic;
+}
+
+.contact-section .form p#offer-price {
+    font-size: 3vw;
+    text-align: center;
 }
 
 

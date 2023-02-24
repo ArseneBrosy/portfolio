@@ -7,6 +7,11 @@ function SendEmail() {
         message: document.getElementById('email-message').value
     };
     emailjs.send("service_72a8r59", "template_g7iu40d", params);
-    document.getElementById('email-form').style.display = "none";
-    document.getElementById('email-thanks').style.display = "block";
+    document.getElementById('email-button').innerHTML = "Envoyé";
+
+    // reset
+    document.getElementById('email-name').value = "";
+    document.getElementById('email-email').value = "";
+    document.getElementById('email-type').selectedIndex = 0;
+    document.getElementById('email-message').value = "";
 }

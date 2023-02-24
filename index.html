@@ -259,21 +259,48 @@
                 <g><path d="M1311.2 300V126.5m-73 0h146" vector-effect="non-scaling-stroke"/></g>
             </svg>
 
-            <h1>Me laisser un message</h1>
-            <div class="form" id="email-form">
-                <input id="email-name" type="text" name="name" placeholder="Nom complet" required>
-                <input id="email-email" type="email" name="email" placeholder="Votre e-mail" required>
-                <select name="type" id="email-type" required>
-                    <option value="0" disabled selected>Type de message</option>
-                    <option value="1">Proposition de projet</option>
-                    <option value="2">Question</option>
-                    <option value="3">Sugestion</option>
-                    <option value="4">Autre</option>
-                </select>
-                <textarea id="email-message" name="message" placeholder="Message" required></textarea>
-                <button onclick="SendEmail();" id="email-button" type="submit">Envoyer</button>
+            <div class="form-cont">
+                <div class="form" id="email-form">
+                    <h1>Me laisser un message</h1>
+                    <input id="email-name" type="text" name="name" placeholder="Nom complet" required>
+                    <input id="email-email" type="email" name="email" placeholder="Votre e-mail" required>
+                    <select name="type" id="email-type" required>
+                        <option value="0" disabled selected>Type de message</option>
+                        <option value="1">Proposition de projet</option>
+                        <option value="2">Question</option>
+                        <option value="3">Sugestion</option>
+                        <option value="4">Autre</option>
+                    </select>
+                    <textarea id="email-message" name="message" placeholder="Message" required></textarea>
+                    <button onclick="SendEmail();" id="email-button" type="submit">Envoyer</button>
+                </div>
+                <div class="form">
+                    <h1>Mes offres</h1>
+                    <select name="offers" id="offers-select" required>
+                        <option value="0" disabled selected>Offre</option>
+                        <option value="1">Site complet</option>
+                        <option value="2">Site vitrine</option>
+                        <option value="3">Site depuis une maquette</option>
+                        <option value="4">Correction d'un site existant</option>
+                    </select>
+                    <div id="offer-details">
+                        <h2>Description</h2>
+                        <p id="offer-description">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum esse saepe atque repudiandae,
+                            rerum molestias quam facilis? Error dignissimos vel hic ipsum reiciendis nesciunt eligendi et
+                            consequuntur at deserunt! Distinctio.
+                        </p>
+                        <h2 style="display: flex;">Prix de base<span class="red-star">*</span>:</h2>
+                        <p id="offer-price">
+                            200 CHF
+                        </p>
+                        <p style="display: flex;" class="little-text"><span class="red-star">*</span>
+                            Les prix sont négociables en fonction de la demande
+                        </p>
+                    </div>
+                    <button id="offer-button">Commander</button>
+                </div>
             </div>
-            <p id="email-thanks" style="display: none;">Merci. je vous recontacterai bientôt.</p>
         </section>
     </main>
 
@@ -308,6 +335,9 @@
     <!-- Envoi e-mail -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./js/send-email.js"></script>
+
+    <!-- Offres -->
+    <script src="./js/offer-manager.js"></script>
 
     <!-- Menu -->
     <script src="./js/menu.js"></script>

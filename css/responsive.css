@@ -25,16 +25,46 @@
         width: 100%;
     }
 
+    .contact-section .form-cont {
+        display: block;
+    }
+
     .contact-section .form {
         width: 100%
     }
 
-    .contact-section .form * {
+    .contact-section .form input, .contact-section .form select, .contact-section .form textarea {
         margin: 1.2vw 0;
         padding: 1.2vw 0.6vw;
         border: 0.4vw solid #373F51;
         border-radius: 0.4vw;
         font-size: 2vw;
+    }
+
+    .contact-section .form h1 {
+        font-size: 5vw;
+    }
+
+    .contact-section .form #offer-details h2 {
+        font-size: 4vw;
+    }
+    
+    .contact-section .form #offer-details p {
+        font-size: 3vw;
+    }
+
+    .contact-section .form #offer-details .red-star {
+        font-size: 3vw;
+    }
+    
+    .contact-section .form #offer-details .little-text {
+        font-size: 3vw;
+        font-style: italic;
+    }
+    
+    .contact-section .form p#offer-price {
+        font-size: 9vw;
+        text-align: center;
     }
     
     .contact-section .form textarea {
