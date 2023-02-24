@@ -13,9 +13,14 @@ body {
     font-weight: normal;
     line-height: 1.4;
     color: #373F51;
-    background-color: white;
+    background-color: #FEFAE0;
     margin: 0;
     padding: 0;
+}
+
+main section:not(.top-section):not(.header-section) {
+    margin: 0 auto;
+    max-width: 1300px;
 }
 
 body.no-scroll {
@@ -198,15 +203,19 @@ header {
 .header-section nav ul li a {
     font-size: 1.2vw;
     text-transform: uppercase;
-    background-image: linear-gradient(#373F51, #373F51);
-    background-repeat: no-repeat;
-    background-position-y: 1.4vw;
-    background-position-x: -15vw;
+}
+
+.header-section nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0.1vw;
+    background-color: #373F51;
     transition-duration: 300ms;
 }
 
-.header-section nav ul li a:hover {
-    background-position-x: 0;
+.header-section nav ul li a:hover::after {
+    width: 100%;
 }
 
 
@@ -237,19 +246,6 @@ header {
     background: url("../src/img/photo.png");
     background-repeat: no-repeat;
     background-size: 120%;
-}
-
-.description-section .photo svg {
-    fill: #373F51;
-    width: 40%;
-    height: 40%;
-    font-weight: bold;
-    animation: rotate 5s linear infinite;
-}
-
-.description-section .photo svg:last-child {
-    margin-left: calc(-40% - 6px);
-    animation-delay: -3.1s;
 }
 
 @keyframes rotate {
