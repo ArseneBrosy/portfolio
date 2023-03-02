@@ -203,6 +203,8 @@ header {
 .header-section nav ul li a {
     font-size: 1.2vw;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
 }
 
 .header-section nav ul li a::after {
