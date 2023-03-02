@@ -1,0 +1,583 @@
+/*****************************************
+ REGLES GENERALES
+ https://coolors.co/ccd5ae-e9edc9-fefae0-faedcd-373f51
+******************************************/
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    font-weight: normal;
+    line-height: 1.4;
+    color: #373F51;
+    background-color: #FEFAE0;
+    margin: 0;
+    padding: 0;
+}
+
+main section:not(.top-section):not(.header-section) {
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+h1 {
+    font-size: 2.5vw;
+}
+
+a {
+    text-decoration: none;
+    color: #373F51;
+}
+
+p {
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/*****************************************
+ HEADER
+******************************************/
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+}
+
+.burger-menu {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: auto 0.6vw;
+    padding: 0;
+    width: 3vw;
+    height: 2.4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 200ms;
+}
+
+.burger-menu:not(.active):hover {
+    padding: 0.3vw 0;
+}
+
+.burger-menu div {
+    background-color: #373F51;
+    width: 100%;
+    height: 10%;
+}
+
+.burger-menu.active div {
+    transform: translateY(-1.05vw) rotateZ(-45deg);
+}
+
+.burger-menu.active div:first-child {
+    transform: translateY(1.05vw) rotateZ(45deg);
+}
+
+.burger-menu.active div:last-child {
+    display: none;
+}
+
+
+/*****************************************
+ SECTION TOP
+******************************************/
+
+.top-section {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FAEDCD;
+}
+
+.top-section p {
+    text-transform: uppercase;
+    font-size: 4vw;
+    text-align: center;
+    /* bordure */
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    /* fond */
+    background: linear-gradient(black, black);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: -100vw;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: title 3s infinite linear;
+}
+
+.top-section p:nth-child(2) {
+    animation-delay: 1s;
+}
+.top-section p:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.top-section div.arrow {
+    height: 4.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.top-section img {
+    width: 3vw;
+    height: 3vw;
+    animation: arrow-scroll 1s infinite;
+}
+
+/* animations */
+@keyframes arrow-scroll {
+    0% {
+        margin-bottom: 0;
+    }
+    50% {
+        margin-bottom: 1.5vw;
+    }
+    75% {
+        margin-bottom: 0;
+    }
+    87% {
+        margin-bottom: 0.3vw;
+    }
+    100% {
+        margin-bottom: 0;
+    }
+}
+
+@keyframes title {
+    from {
+        background-position-x: -100vw;
+    }
+    to {
+        background-position-x: 100vw;
+    }
+}
+
+
+/*****************************************
+ SECTION HEADER
+******************************************/
+
+.header-section {
+    background-color: #FAEDCD;
+    border-bottom: 0.2vw solid #373F51;
+    position: sticky;
+    top: 0;
+}
+
+.header-section nav {
+    padding: 0.6vw 0;
+}
+
+.header-section nav ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 1vw;
+}
+
+.header-section nav ul li a {
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-section nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 0.1vw;
+    background-color: #373f51;
+    animation: underline-exit 150ms forwards;
+}
+
+.header-section nav ul li a:hover::after {
+    animation: underline-enter 150ms forwards;
+}
+
+@keyframes underline-enter {
+    from {
+        margin-left: 0;
+        width: 0;
+    }
+    to {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@keyframes underline-exit {
+    from {
+        margin-left: 0;
+        width: 100%;
+    }
+    to {
+        margin-left: 100%;
+        width: 0;
+    }
+}
+
+
+/*****************************************
+ SECTION DESCRIPTION
+******************************************/
+
+.description-section {
+    padding: 0 10%;
+    background-color: #FEFAE0;
+}
+
+.description-section>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description-section p {
+    font-size: 2vw;
+    font-weight: 700;
+    width: 50%;
+}
+
+.description-section .photo {
+    width: 40%;
+    border-radius: 50%;
+    background: url("../src/img/photo.png");
+    background-repeat: no-repeat;
+    background-size: 120%;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/*****************************************
+ TABLE SECTION
+******************************************/
+
+.table-section {
+    background-color: #FEFAE0;
+    padding: 5% 10%;
+}
+
+.table-section h1 {
+    margin-top: 6vw;
+}
+
+.table-section h1:first-of-type {
+    margin-top: 0;
+}
+
+
+/*****************************************
+ CONTACT SECTION
+******************************************/
+
+.contact-section {
+    background-color: #FEFAE0;
+    padding: 5% 10%;
+}
+
+.contact-section .form-cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-section .form {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .form input, .contact-section .form select, .contact-section .form textarea {
+    margin: 0.6vw 0;
+    padding: 0.6vw 0.3vw;
+    border: 0.2vw solid #373F51;
+    border-radius: 0.2vw;
+    font-size: 1vw;
+}
+
+.contact-section .form h1 {
+    font-size: 2vw;
+}
+
+.contact-section .form textarea {
+    height: 9vw;
+    min-height: 9vw;
+    resize: vertical;
+}
+
+.contact-section .form button {
+    width: fit-content;
+    padding: 0.6vw 1.8vw;
+    background-color: #373F51;
+    color: white;
+    border: none;
+    border-radius: 0.3vw;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.contact-section .form #offer-details {
+    margin-bottom: 1vw;
+}
+
+.contact-section .form #offer-details h2 {
+    margin-bottom: 0;
+    font-size: 1.5vw;
+}
+
+.contact-section .form #offer-details p {
+    font-size: 1vw;
+}
+
+.contact-section .form #offer-details .red-star {
+    color: red;
+    font-size: 1vw;
+}
+
+.contact-section .form #offer-details .little-text {
+    font-size: 1vw;
+    font-style: italic;
+}
+
+.contact-section .form p#offer-price {
+    font-size: 3vw;
+    text-align: center;
+}
+
+
+/*****************************************
+ SVG TITLES
+******************************************/
+
+.svg-title {
+    margin: 6vw 0 3vw;
+    padding: 0;
+}
+
+.svg-title path {
+    stroke-width: 0.8vw;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+}
+.svg-title path.animate {
+    animation: dash 1s linear forwards;
+}
+
+.svg-title path:nth-child(2) {
+    animation-delay: 200ms;
+}
+
+.svg-title path:nth-child(3) {
+    animation-delay: 400ms;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 600;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/*****************************************
+ TABLES
+******************************************/
+
+table {
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr>* {
+    padding: 0.75vw 0;
+    border-top: 0.2vw solid #373F51;
+    border-bottom: 0.2vw solid #373F51;
+    transition: 200ms;
+    font-size: 1.5vw;
+}
+
+table tr:hover td {
+    transform: translateX(3vw);
+}
+
+table tr {
+    background-color: transparent;
+    transition: 200ms;
+}
+
+table tr:not(:first-child):hover {
+    background-color: #FAEDCD;
+}
+
+
+/*****************************************
+ MENU TRANSITION
+******************************************/
+
+#menu-transition {
+    position: fixed;
+    top: -150vw;
+    left: -150vw;
+    width: 300vw;
+    z-index: -1;
+}
+
+#menu-transition div {
+    background-color: #ccd5ae;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#menu-transition.opened div {
+    height: 100%;
+    width: 100%;
+}
+
+
+/*****************************************
+ MENU
+******************************************/
+
+#menu {
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    position: fixed;
+    padding: 6vw;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu ul li {
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 150ms ease-in;
+    width: fit-content;
+}
+
+#menu ul li a {
+    color: #373F51;
+}
+
+#menu ul li a * {
+    display: inline;
+    opacity: 0;
+    transition: 300ms;
+}
+
+#menu ul li:hover {
+    transform: translateX(3vw);
+}
+
+#menu ul li:hover a * {
+    opacity: 1;
+}
+
+#menu button {
+    cursor: pointer;
+    position: absolute;
+    bottom: 1.5vw;
+    right: 1.5vw;
+    --c: #2D728F;
+    color: var(--c);
+    font-size: 1.5vw;
+    border: 0.2vw solid var(--c);
+    border-radius: 0.5vw;
+    padding: 0.9vw 3vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1vw;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 0;
+}
+
+#menu button span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+#menu button:hover {
+    color: black;
+}
+
+#menu button:hover span {
+    transform: translateY(0) scale(2);
+}
+
+#menu button span:nth-child(1) {
+    --n: 1;
+}
+
+#menu button span:nth-child(2) {
+    --n: 2;
+}
+
+#menu button span:nth-child(3) {
+    --n: 3;
+}
+
+#menu button span:nth-child(4) {
+    --n: 4;
+}
+
+
+/*****************************************
+ PARCOURS PAGE
+******************************************/
+
+.parcours {
+    background-color: #236477;
+    overflow: hidden;
+}

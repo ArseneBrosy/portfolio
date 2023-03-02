@@ -6,27 +6,334 @@
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Titre de la page -->
-    <title>TITRE ICI</title>
+    <title>Portfolio | Arsène Brosy</title>
     <!-- Auteur -->
     <meta name="author" content="Arsène Brosy">
     <!-- Description de la page -->
     <meta name="description" content="DESCRIPTION ICI">
-    <!-- CSS de base -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/responsive.css"/>
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico"/>
 </head>
 <body>
     <!-- En tete du site -->
-    <header>
+    <header id="header-r">
+        <button onclick="OpenClose();" class="burger-menu" id="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
     </header>
+
+    <!-- Menu transition -->
+    <div class="square-width" id="menu-transition">
+        <div></div>
+    </div>
+
+    <!-- Menu -->
+    <div id="menu" style="display: none;">
+        <ul>
+            <li><a href="./"><p>•</p>Arsène Brosy</a></li>
+            <li><a href=""><p>•</p>Biographie</a></li>
+            <li><a href="parcours.html"><p>•</p>Parcours</a></li>
+            <li><a href=""><p>•</p>Créations</a></li>
+        </ul>
+        <button>
+            Offres
+            <span></span><span></span><span></span><span></span>
+        </button>
+    </div>
 
     <!-- Contenu principal du site -->
     <main>
+        <section class="top-section" id="top">
+            <!-- Juste pour centrer le titre -->
+            <div style="height: 4.5vw;"></div>
+            <div class="title">
+                <p>Arsene Brosy<span class="responsive"> • Création web • 2023</span></p>
+                <p>Création web<span class="responsive"> • 2023 • Arsene Brosy</span></p>
+                <p>2023<span class="responsive"> • Arsene Brosy • Création web</span></p>
+            </div>
+            <div class="arrow">
+                <img src="./src/icons/arrow_scroll.svg" alt="">
+            </div>
+        </section>
+
+        <section class="header-section" id="header-s">
+            <nav>
+                <ul>
+                    <li><a href="#top">Arsene Brosy</a></li>
+                    <li><a href="#about">A Propos</a></li>
+                    <li><a href="#parcours">Parcours</a></li>
+                    <li><a href="#skills">Competences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="description-section" id="about">
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-title" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" viewBox="0 100 1476.6 210"></g>
+                <g><path d="m185.1 300.5-88-174-88 174m19-38h138" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M330.8 300V126.5h72c31 0 56 25 56 56s-25 55.5-56 55.5h-72" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="m636.4 300-56-72m-79 0h84c28 0 51-22.5 51-50.5s-23-51-51-51h-84V300" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M774.4 113.5c52 0 93 42 93 94 0 51-41 93-93 93-51 0-93-42-93-93 0-52 42-94 93-94" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M911 300V126.5h72c31 0 56 25 56 56s-25 55.5-56 55.5h-72" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1174.6 113.5c52 0 93 42 93 94 0 51-41 93-93 93-51 0-93-42-93-93 0-52 42-94 93-94" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1312.6 277c15 8 34 22 65 23h2c42 1 60-22 60-45 0-28-27-40.5-66-48.5-23-5-55-16-54-45 0-32 20-48 62-45 16 1 33 8 48 16" vector-effect="non-scaling-stroke"/></g>
+            </svg>
+
+            <div>
+                <p>
+                    Je suis Arsène Brosy et je suis un étudiant en informatique à l'EMT à Porrentruy en Suisse.
+                    <br><br>
+                    Je suis depuis quelque années interessé par la création de site web.
+                    <br><br>
+                    Si vous aimez ce site web <a style="text-decoration: underline;" href="#contact">contactez-moi</a>
+                    gratuitement pour me parler de votre projet ou simplement me poser des questions.
+                </p>
+                <div class="photo square-width" id="photo-scroll"></div>
+            </div>
+            <script>
+                document.addEventListener("scroll", () => {
+                    var scrollFloat = (window.scrollY - screen.height - 100) * 0.3;
+                    scrollFloat = Math.min(Math.max(scrollFloat, 0), 100);
+                    var scroll = scrollFloat + "%";
+                    document.getElementById("photo-scroll").style.backgroundPositionY =  scroll;
+                });
+            </script>
+        </section>
+
+        <section class="table-section" id="parcours">
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-title" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" viewBox="0 100 1545.4 210">
+                <g><path d="M6.6 300V126.5h72c31 0 56 25 56 56s-25 55.5-56 55.5h-72" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="m356.3 300.5-88-174-88 174m19-38h138" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="m536.4 300-56-72m-79 0h84c28 0 51-22.5 51-50.5s-23-51-51-51h-84V300" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M733.4 275.5c-16 15-38 25-62 25-50 0-90-41-90-91s40-90 90-90c25 0 47 10 63 25" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M874.4 113.5c52 0 93 42 93 94 0 51-41 93-93 93-51 0-93-42-93-93 0-52 42-94 93-94" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1010.4 123.5V235c0 36 35 65 73 65s73-29 73-65V123.5" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="m1334.4 300-56-72m-79 0h84c28 0 51-22.5 51-50.5s-23-51-51-51h-84V300" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1381.4 277c15 8 34 22 65 23h2c42 1 60-22 60-45 0-28-27-40.5-66-48.5-23-5-55-16-54-45 0-32 20-48 62-45 16 1 33 8 48 16" vector-effect="non-scaling-stroke"/></g>
+            </svg>
+
+            <h1>Ecoles</h1>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Ecole</th>
+                    <th>Lieu</th>
+                </tr>
+                <tr>
+                    <td>2010 - 2013</td>
+                    <td>Ecole enfantine</td>
+                    <td><a href="https://www.courtetelle.ch/fr/Vivre/Chemin-de-vie/Ecole/Ecole.html#">Courtételle</a></td>
+                </tr>
+                <tr>
+                    <td>2013 - 2019</td>
+                    <td>Ecole primaire</td>
+                    <td><a href="https://www.courtetelle.ch/fr/Vivre/Chemin-de-vie/Ecole/Ecole.html#">Courtételle</a></td>
+                </tr>
+                <tr>
+                    <td>2019 - 2022</td>
+                    <td>Collège</td>
+                    <td><a href="https://www.college-delemont.ch/">Delémont</a></td>
+                </tr>
+                <tr>
+                    <td>2022 - ...</td>
+                    <td>CFC Informaticien</td>
+                    <td><a href="https://www.divtec.ch/">EMT Porrentruy</a></td>
+                </tr>
+            </table>
+
+            <h1>Exeriences professionelles</h1>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Experience</th>
+                    <th>Lieu</th>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>Stage Automaticien</td>
+                    <td><a href="https://willemin-macodel.com/">Willemin-Macodel</a></td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>Stage Automaticien</td>
+                    <td><a href="https://www.humard.com/">Humard</a></td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>Stage Informaticien</td>
+                    <td><a href="https://inetis.ch/">Inetis</a></td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>Stage Informaticien</td>
+                    <td><a href="https://www.divtec.ch/">EMT Porrentruy</a></td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="table-section" id="skills">
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-title" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" viewBox="0 100 2043.2 210">
+                <g><path d="M158 275.5c-16 15-38 25-62 25-50 0-90-41-90-91s40-90 90-90c25 0 47 10 63 25" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M299 113.5c52 0 93 42 93 94 0 51-41 93-93 93-51 0-93-42-93-93 0-52 42-94 93-94" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M435 300.5v-174l85 115 87-115v174" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M650.6 300V126.5h72c31 0 56 25 56 56s-25 55.5-56 55.5h-72" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M937.2 300.5h-116v-174h116m-116 87h99" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1053.2 300V126.5m-73 0h146" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1285.2 300.5h-116v-174h116m-116 87h99" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1328.2 300.5v-174l147 174v-174" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1670.2 275.5c-16 15-38 25-62 25-50 0-90-41-90-91s40-90 90-90c25 0 47 10 63 25" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1834.2 300.5h-116v-174h116m-116 87h99" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1879.2 277c15 8 34 22 65 23h2c42 1 60-22 60-45 0-28-27-40.5-66-48.5-23-5-55-16-54-45 0-32 20-48 62-45 16 1 33 8 48 16" vector-effect="non-scaling-stroke"/></g>
+            </svg>
+
+            <h1>Langues</h1>
+            <table>
+                <tr>
+                    <th>Langue</th>
+                    <th>Niveau</th>
+                </tr>
+                <tr>
+                    <td>Français</td>
+                    <td>Langue maternelle</td>
+                </tr>
+                <tr>
+                    <td>Anglais</td>
+                    <td>Parlé couramment</td>
+                </tr>
+                <tr>
+                    <td>Allemand</td>
+                    <td>Bonnes bases</td>
+                </tr>
+                <tr>
+                    <td>Russe</td>
+                    <td>Quelque notions</td>
+                </tr>
+            </table>
+
+            <h1>Développement</h1>
+            <table>
+                <tr>
+                    <th>Language</th>
+                    <th>Niveau</th>
+                </tr>
+                <tr>
+                    <td>C# - Unity</td>
+                    <td>Maitrise presque parfaite</td>
+                </tr>
+                <tr>
+                    <td>C++</td>
+                    <td>Maitrise presque parfaite</td>
+                </tr>
+                <tr>
+                    <td>HTML / CSS</td>
+                    <td>Très bonne maitrise</td>
+                </tr>
+                <tr>
+                    <td>Javascript</td>
+                    <td>Très bonne maitrise</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>Très bonne maitrise</td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>Quelque notions</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-title" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" viewBox="0 100 1421.2 210">
+                <g><path d="M158 275.5c-16 15-38 25-62 25-50 0-90-41-90-91s40-90 90-90c25 0 47 10 63 25" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M299 113.5c52 0 93 42 93 94 0 51-41 93-93 93-51 0-93-42-93-93 0-52 42-94 93-94" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M435 300.5v-174l147 174v-174" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M698 300V126.5m-73 0h146" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="m993.1 300.5-88-174-88 174m19-38h138" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1190.2 275.5c-16 15-38 25-62 25-50 0-90-41-90-91s40-90 90-90c25 0 47 10 63 25" vector-effect="non-scaling-stroke"/></g>
+                <g><path d="M1311.2 300V126.5m-73 0h146" vector-effect="non-scaling-stroke"/></g>
+            </svg>
+
+            <div class="form-cont">
+                <div class="form" id="email-form">
+                    <h1>Me laisser un message</h1>
+                    <input id="email-name" type="text" name="name" placeholder="Nom complet" required>
+                    <input id="email-email" type="email" name="email" placeholder="Votre e-mail" required>
+                    <select name="type" id="email-type" required>
+                        <option value="0" disabled selected>Type de message</option>
+                        <option value="1">Proposition de projet</option>
+                        <option value="2">Question</option>
+                        <option value="3">Sugestion</option>
+                        <option value="4">Autre</option>
+                    </select>
+                    <textarea id="email-message" name="message" placeholder="Message" required></textarea>
+                    <button onclick="SendEmail();" id="email-button" type="submit">Envoyer</button>
+                </div>
+                <div class="form">
+                    <h1>Mes offres</h1>
+                    <select name="offers" id="offers-select" required>
+                        <option value="0" disabled selected>Offre</option>
+                        <option value="1">Site complet</option>
+                        <option value="2">Site vitrine</option>
+                        <option value="3">Site depuis une maquette</option>
+                        <option value="4">Correction d'un site existant</option>
+                    </select>
+                    <div id="offer-details">
+                        <h2>Description</h2>
+                        <p id="offer-description"></p>
+                        <h2 style="display: flex;">Prix de base<span class="red-star">*</span>:</h2>
+                        <p id="offer-price"></p>
+                        <p style="display: flex;" class="little-text"><span class="red-star">*</span>
+                            Les prix sont négociables en fonction de la demande
+                        </p>
+                    </div>
+                    <button id="offer-button">Commander</button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Pied de page du site -->
     <footer>
     </footer>
+
+    <!-- Elements à adapter -->
+    <script>
+        function loop() {
+            // Carrées
+            var elemsW = document.getElementsByClassName("square-width");
+            var elemsH = document.getElementsByClassName("square-height");
+            for (var i = 0; i < elemsW.length; i++) {
+                elemsW[i].style.height = elemsW[i].clientWidth + "px";
+            }
+            for (var i = 0; i < elemsH.length; i++) {
+                elemsH[i].style.width = elemsH[i].clientHeight + "px";
+            }
+
+            // Mettre le header et la section header a la meme hauteur
+            document.getElementById("header-r").style.height = document.getElementById("header-s").clientHeight + "px";
+
+            requestAnimationFrame(loop);
+        }
+        requestAnimationFrame(loop);
+    </script>
+
+    <!-- Animation des svg -->
+    <script src="./js/svg-titles.js"></script>
+
+    <!-- Envoi e-mail -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="./js/send-email.js"></script>
+
+    <!-- Offres -->
+    <script src="./js/offer-manager.js"></script>
+
+    <!-- Menu -->
+    <script src="./js/menu.js"></script>
 </body>
 </html>
